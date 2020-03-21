@@ -45,6 +45,7 @@ class defcont extends CI_Controller {
 
     public function province_input() {
         $this->load->library('json');
+        
         $regione = $this->input->post('regione');
 
         $dati = $this->covidmodel->get_province($regione);
