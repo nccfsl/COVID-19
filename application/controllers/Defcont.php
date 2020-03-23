@@ -13,7 +13,7 @@ class Defcont extends CI_Controller {
         $datagraph = array();
 
         foreach($dati as $dato) {
-            array_push($datagraph, array("label" => $dato->regione, "y" => $dato->{"totale casi"}));
+            array_push($datagraph, array("label" => $dato->denominazione_regione, "y" => $dato->totale_casi));
         }
 
         $data['graph'] = $datagraph;

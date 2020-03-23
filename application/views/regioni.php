@@ -46,8 +46,8 @@
             var dati = <?php echo json_encode($regioni)?>;
 
             dati.forEach(function (item, index) {
-                addMarkerToGroup(group, {lat:item.lat, lng:item.lng},
-                item.regione + ': ' + item['totale casi']);
+                addMarkerToGroup(group, {lat:item.lat, lng:item.long},
+                item.denominazione_regione + ': ' + item.totale_casi);
             });
         }
         window.onload = function () { 
@@ -135,9 +135,9 @@
                                 <?php foreach($regioni as $regione) : ?>
                                 <div class="siimple-list-item siimple--clearfix">
                                     <div class="siimple--float-left">
-                                        <div class="siimple-list-title"><?= $regione->regione ?></div>
+                                        <div class="siimple-list-title"><?= $regione->denominazione_regione ?></div>
                                     </div>
-                                    <div class="siimple--float-right"><?= $regione->{'totale casi'} ?></div>
+                                    <div class="siimple--float-right"><?= $regione->totale_casi ?></div>
                                 </div>
                                 <?php endforeach?>
                             </div>
