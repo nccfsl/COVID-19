@@ -137,7 +137,7 @@
                 <div class="siimple-grid animated zoomIn">
                     <div class="siimple-grid-row">
                         <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
-                            <div class="siimple-card siimple--color-warning" style="max-width:300px">
+                            <div class="siimple-card siimple--color-warning">
                                 <div class="siimple-card-header siimple--text-center">
                                     Attualmente positivi
                                 </div>
@@ -147,7 +147,7 @@
                             </div>
                         </div>
                         <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
-                            <div class="siimple-card siimple--color-success" style="max-width:300px">
+                            <div class="siimple-card siimple--color-success">
                                 <div class="siimple-card-header siimple--text-center">
                                     Guariti
                                 </div>
@@ -157,7 +157,7 @@
                             </div>
                         </div>
                         <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
-                            <div class="siimple-card siimple--color-error" style="max-width:300px">
+                            <div class="siimple-card siimple--color-error">
                                 <div class="siimple-card-header siimple--text-center">
                                     Deceduti
                                 </div>
@@ -167,7 +167,7 @@
                             </div>
                         </div>
                         <div class="siimple-grid-col siimple-grid-col--3 siimple-grid-col--sm-12">
-                            <div class="siimple-card" style="max-width:300px">
+                            <div class="siimple-card">
                                 <div class="siimple-card-header siimple--text-center">
                                     Totale casi
                                 </div>
