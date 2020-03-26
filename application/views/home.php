@@ -23,7 +23,7 @@
                 <div class="siimple-grid animated zoomIn">
                     <div class="siimple-grid-row">
                         <div class="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12">
-                            <div class="siimple-card" style="max-width:300px">
+                            <div class="siimple-card">
                                 <div class="siimple-card-header">
                                     Dati andamento nazionale
                                 </div>
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12">
-                            <div class="siimple-card" style="max-width:300px">
+                            <div class="siimple-card">
                                 <div class="siimple-card-header">
                                     Dati per regione
                                 </div>
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12">
-                            <div class="siimple-card" style="max-width:300px">
+                            <div class="siimple-card">
                                 <div class="siimple-card-header">
                                     Dati per provincia
                                 </div>
