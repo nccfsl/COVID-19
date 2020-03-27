@@ -51,7 +51,7 @@
                         <div class="siimple-grid-col siimple-grid-col--4 siimple-grid-col--sm-12">
                             <div class="siimple-card">
                                 <div class="siimple-card-header">
-                                    Dati per provincia
+                                    Dati per provincia <span class="siimple-tag siimple-tag--error siimple-tag--rounded">Preview</span>
                                 </div>
                                 <div class="siimple-card-body">
                                     Scopri i dati di ogni singola provincia, con grafici
