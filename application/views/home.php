@@ -63,6 +63,9 @@
                         </div>
                     </div>
                 </div>
+                <blockquote class="siimple-blockquote">
+                    Dati aggiornati il <?= $data ?> alle <?= $ora ?>
+                </blockquote>
             </div>
         </main>
     </body>

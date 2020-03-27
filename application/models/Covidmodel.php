@@ -132,5 +132,17 @@
 
             return $dati;
         }
+
+        public function get_dataora() {
+            $json = file_get_contents('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json');
+            if(substr($json, 0, 3) == pack("CCC", 0xEF, 0xBB, 0xBF)) {
+                $json = substr($json, 3);
+            }
+            $obj = json_decode($json);
+
+            $latest = end($obj);
+
+            return $latest->data;
+        }
     }
 ?>

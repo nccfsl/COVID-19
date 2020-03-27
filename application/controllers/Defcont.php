@@ -2,7 +2,14 @@
 
 class Defcont extends CI_Controller {
     public function index() {
-        $this->load->view('home');
+        $date = new DateTime($this->covidmodel->get_dataora());
+        $formattedDate = $date->format('d/m/Y');
+        $formattedTime = $date->format('H:i');
+
+        $data['data'] = $formattedDate;
+        $data['ora'] = $formattedTime;
+
+        $this->load->view('home', $data);
     }
 
     public function regioni() {
@@ -15,6 +22,13 @@ class Defcont extends CI_Controller {
         foreach($dati as $dato) {
             array_push($datagraph, array("label" => $dato->denominazione_regione, "y" => $dato->totale_casi));
         }
+
+        $date = new DateTime($this->covidmodel->get_dataora());
+        $formattedDate = $date->format('d/m/Y');
+        $formattedTime = $date->format('H:i');
+
+        $data['data'] = $formattedDate;
+        $data['ora'] = $formattedTime;
 
         $data['graph'] = $datagraph;
 
@@ -32,6 +46,13 @@ class Defcont extends CI_Controller {
         $data['deceduti'] = $storico[2];
         $data['incremento'] = $incremento;
 
+        $date = new DateTime($this->covidmodel->get_dataora());
+        $formattedDate = $date->format('d/m/Y');
+        $formattedTime = $date->format('H:i');
+
+        $data['data'] = $formattedDate;
+        $data['ora'] = $formattedTime;
+
         $this->load->view('andamento', $data);
     }
 
@@ -39,6 +60,13 @@ class Defcont extends CI_Controller {
         $prov = $this->covidmodel->get_prov();
 
         $data['prov'] = $prov;
+
+        $date = new DateTime($this->covidmodel->get_dataora());
+        $formattedDate = $date->format('d/m/Y');
+        $formattedTime = $date->format('H:i');
+
+        $data['data'] = $formattedDate;
+        $data['ora'] = $formattedTime;
 
         $this->load->view('province', $data);
     }

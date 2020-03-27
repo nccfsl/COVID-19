@@ -122,6 +122,9 @@
                         <div id="positivi" style="height: 450px; width: 100%;"></div>
                     </div>
                 </div>
+                <blockquote class="siimple-blockquote">
+                    Dati aggiornati il <?= $data ?> alle <?= $ora ?>
+                </blockquote>
             </div>
         </main>
     </body>
