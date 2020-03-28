@@ -1,7 +1,7 @@
 <?php
     class Covidmodel extends CI_Model
     {
-        public function insert_data() { // inserts all the data into the database
+        /* public function insert_data() { // inserts all the data into the database
             $this->db->db_debug = TRUE;
             $sql = "INSERT INTO Regioni (data, regione, codice_regione, latitudine, longitudine, ricoverati_sintomi, terapia_intensiva, ospedalizzati, isolamento_domiciliare, tot_att_positivi, nuovi_att_positivi, guariti, deceduti, totale_casi, tamponi) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
@@ -35,7 +35,7 @@
             $formattedDate = $date->format('Y-m-d');
 
             $this->db->query($sql, array($formattedDate, $ob->ricoverati_con_sintomi, $ob->terapia_intensiva, $ob->totale_ospedalizzati, $ob->isolamento_domiciliare, $ob->totale_attualmente_positivi, $ob->nuovi_attualmente_positivi, $ob->dimessi_guariti, $ob->deceduti, $ob->totale_casi, $ob->tamponi));
-        }
+        } */
 
         public function get_regioni() {
             $this->load->library('curl');
