@@ -41,7 +41,7 @@
                                     Dati per regione
                                 </div>
                                 <div class="siimple-card-body">
-                                    Scopri i dati per ogni singola regione, con grafici e mappa
+                                    Scopri i dati per ogni singola regione, con grafici e mappa<br>
                                     <span class="siimple-tag siimple-tag--success siimple-tag--rounded">New</span>Clicca sul nome della regione per avere info dettagliate sulla regione
                                 </div>
                                 <div class="siimple-card-footer">
