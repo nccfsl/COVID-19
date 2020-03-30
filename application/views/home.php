@@ -42,6 +42,7 @@
                                 </div>
                                 <div class="siimple-card-body">
                                     Scopri i dati per ogni singola regione, con grafici e mappa
+                                    <span class="siimple-tag siimple-tag--success siimple-tag--rounded">New</span>Clicca sul nome della regione per avere info dettagliate sulla regione
                                 </div>
                                 <div class="siimple-card-footer">
                                 <a href="<?php echo site_url('defcont/regioni'); ?>" class="siimple-btn siimple-btn--primary siimple-btn--fluid">Scopri</a>
