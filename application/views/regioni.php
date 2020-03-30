@@ -159,7 +159,7 @@
                                 <?php foreach($regioni as $regione) : ?>
                                 <div class="siimple-list-item siimple--clearfix">
                                     <div class="siimple--float-left">
-                                        <div class="siimple-list-title"><?= $regione->denominazione_regione ?></div>
+                                        <a href="<?php echo site_url('defcont/regione/' . $regione->denominazione_regione); ?>" class="siimple-list-title"><?= $regione->denominazione_regione ?></a>
                                     </div>
                                     <div class="siimple--float-right"><?= $regione->totale_casi ?></div>
                                 </div>

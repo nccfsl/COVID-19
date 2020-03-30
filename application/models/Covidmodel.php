@@ -133,6 +133,42 @@
             return $dati;
         }
 
+        public function get_dettaglio_regione($regione) {
+            $json = file_get_contents('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni.json');
+            if(substr($json, 0, 3) == pack("CCC", 0xEF, 0xBB, 0xBF)) {
+                $json = substr($json, 3);
+            }
+            $obj = json_decode($json);
+
+            $result = new stdClass();
+            $result->ricoverati = array();
+            $result->terapia_intensiva = array();
+            $result->isolamento_domiciliare = array();
+            $result->nuovi_att_positivi = array();
+            $result->guariti = array();
+            $result->deceduti = array();
+            $result->tamponi = array();
+
+            $dati = array();
+            foreach($obj as $ob) {
+                $obdata = new Datetime($ob->data);
+
+                if ($ob->denominazione_regione !== $regione) {
+                    continue;
+                }
+
+                array_push($result->ricoverati, array("label" => $obdata->format('d/m/Y'), "y" => $ob->ricoverati_con_sintomi));
+                array_push($result->terapia_intensiva, array("label" => $obdata->format('d/m/Y'), "y" => $ob->terapia_intensiva));
+                array_push($result->isolamento_domiciliare, array("label" => $obdata->format('d/m/Y'), "y" => $ob->isolamento_domiciliare));
+                array_push($result->nuovi_att_positivi, array("label" => $obdata->format('d/m/Y'), "y" => $ob->nuovi_attualmente_positivi));
+                array_push($result->guariti, array("label" => $obdata->format('d/m/Y'), "y" => $ob->dimessi_guariti));
+                array_push($result->deceduti, array("label" => $obdata->format('d/m/Y'), "y" => $ob->deceduti));
+                array_push($result->tamponi, array("label" => $obdata->format('d/m/Y'), "y" => $ob->tamponi));
+            }
+
+            return $result;
+        }
+
         public function get_dataora() {
             $json = file_get_contents('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json');
             if(substr($json, 0, 3) == pack("CCC", 0xEF, 0xBB, 0xBF)) {

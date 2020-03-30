@@ -35,6 +35,21 @@ class Defcont extends CI_Controller {
         $this->load->view('regioni', $data);
     }
 
+    public function regione($nomereg) {
+        $data['datiregione'] = $this->covidmodel->get_dettaglio_regione($nomereg);
+
+        $data['regione'] = $nomereg;
+
+        $date = new DateTime($this->covidmodel->get_dataora());
+        $formattedDate = $date->format('d/m/Y');
+        $formattedTime = $date->format('H:i');
+
+        $data['data'] = $formattedDate;
+        $data['ora'] = $formattedTime;
+
+        $this->load->view('regione', $data);
+    }
+
     public function andamento() {
         $dati_generali = $this->covidmodel->get_andamento_naz();
         $storico = $this->covidmodel->get_storico();
