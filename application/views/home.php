@@ -28,7 +28,8 @@
                                     Dati andamento nazionale
                                 </div>
                                 <div class="siimple-card-body">
-                                    Scopri l'andamento dell'Italia, come contagiati totali e numero di guariti
+                                    Scopri l'andamento dell'Italia, come contagiati totali e numero di guariti<br><br>
+                                    Grafici dell'andamento generale del paese e aggiornati ogni giorno
                                 </div>
                                 <div class="siimple-card-footer">
                                     <a href="<?php echo site_url('defcont/andamento'); ?>" class="siimple-btn siimple-btn--primary siimple-btn--fluid">Scopri</a>
@@ -41,7 +42,7 @@
                                     Dati per regione
                                 </div>
                                 <div class="siimple-card-body">
-                                    Scopri i dati per ogni singola regione, con grafici e mappa<br>
+                                    Scopri i dati per ogni singola regione, con grafici e mappa<br><br>
                                     <span class="siimple-tag siimple-tag--success siimple-tag--rounded">New</span>Clicca sul nome della regione per avere info dettagliate sulla regione
                                 </div>
                                 <div class="siimple-card-footer">
@@ -55,7 +56,8 @@
                                     Dati per provincia <span class="siimple-tag siimple-tag--error siimple-tag--rounded">Preview</span>
                                 </div>
                                 <div class="siimple-card-body">
-                                    Scopri i dati di ogni singola provincia, con grafici
+                                    Scopri i dati di ogni singola provincia, con grafici<br><br>
+                                    Grafici del totale casi per ogni provincia, basta scegliere la regione
                                 </div>
                                 <div class="siimple-card-footer">
                                 <a href="<?php echo site_url('defcont/province'); ?>" class="siimple-btn siimple-btn--primary siimple-btn--fluid">Scopri</a>
