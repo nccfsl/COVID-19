@@ -16,7 +16,7 @@
 
                 $formattedDate = $date->format('Y-m-d');
 
-                $this->db->query($sql, array($formattedDate, $ob->denominazione_regione, $ob->codice_regione, $ob->lat, $ob->long, $ob->ricoverati_con_sintomi, $ob->terapia_intensiva, $ob->totale_ospedalizzati, $ob->isolamento_domiciliare, $ob->totale_attualmente_positivi, $ob->nuovi_attualmente_positivi, $ob->dimessi_guariti, $ob->deceduti, $ob->totale_casi, $ob->tamponi));
+                $this->db->query($sql, array($formattedDate, $ob->denominazione_regione, $ob->codice_regione, $ob->lat, $ob->long, $ob->ricoverati_con_sintomi, $ob->terapia_intensiva, $ob->totale_ospedalizzati, $ob->isolamento_domiciliare, $ob->totale_positivi, $ob->variazione_totale_positivi, $ob->dimessi_guariti, $ob->deceduti, $ob->totale_casi, $ob->tamponi));
             }
         }
 
@@ -34,7 +34,7 @@
 
             $formattedDate = $date->format('Y-m-d');
 
-            $this->db->query($sql, array($formattedDate, $ob->ricoverati_con_sintomi, $ob->terapia_intensiva, $ob->totale_ospedalizzati, $ob->isolamento_domiciliare, $ob->totale_attualmente_positivi, $ob->nuovi_attualmente_positivi, $ob->dimessi_guariti, $ob->deceduti, $ob->totale_casi, $ob->tamponi));
+            $this->db->query($sql, array($formattedDate, $ob->ricoverati_con_sintomi, $ob->terapia_intensiva, $ob->totale_ospedalizzati, $ob->isolamento_domiciliare, $ob->totale_positivi, $ob->variazione_totale_positivi, $ob->dimessi_guariti, $ob->deceduti, $ob->totale_casi, $ob->tamponi));
         } */
 
         public function get_regioni() {
@@ -68,7 +68,7 @@
             foreach($obj as $ob) {
                 $date = new DateTime($ob->data);
 
-                array_push($dati[0], array("label" => $date->format('d/m/Y'), "y" => $ob->totale_attualmente_positivi));
+                array_push($dati[0], array("label" => $date->format('d/m/Y'), "y" => $ob->totale_positivi));
                 array_push($dati[1], array("label" => $date->format('d/m/Y'), "y" => $ob->dimessi_guariti));
                 array_push($dati[2], array("label" => $date->format('d/m/Y'), "y" => $ob->deceduti));
             }
@@ -89,7 +89,7 @@
             foreach($obj as $ob) {
                 $date = new DateTime($ob->data);
 
-                array_push($dati, array("label" => $date->format('d/m/Y'), "y" => $ob->nuovi_attualmente_positivi));
+                array_push($dati, array("label" => $date->format('d/m/Y'), "y" => $ob->variazione_totale_positivi));
             }
 
             return $dati;
@@ -160,7 +160,7 @@
                 array_push($result->ricoverati, array("label" => $obdata->format('d/m/Y'), "y" => $ob->ricoverati_con_sintomi));
                 array_push($result->terapia_intensiva, array("label" => $obdata->format('d/m/Y'), "y" => $ob->terapia_intensiva));
                 array_push($result->isolamento_domiciliare, array("label" => $obdata->format('d/m/Y'), "y" => $ob->isolamento_domiciliare));
-                array_push($result->nuovi_att_positivi, array("label" => $obdata->format('d/m/Y'), "y" => $ob->nuovi_attualmente_positivi));
+                array_push($result->nuovi_att_positivi, array("label" => $obdata->format('d/m/Y'), "y" => $ob->variazione_totale_positivi));
                 array_push($result->guariti, array("label" => $obdata->format('d/m/Y'), "y" => $ob->dimessi_guariti));
                 array_push($result->deceduti, array("label" => $obdata->format('d/m/Y'), "y" => $ob->deceduti));
                 array_push($result->tamponi, array("label" => $obdata->format('d/m/Y'), "y" => $ob->tamponi));

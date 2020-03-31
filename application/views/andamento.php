@@ -142,7 +142,7 @@
                                     Attualmente positivi
                                 </div>
                                 <div class="siimple-card-body">
-                                    <div class="siimple-h1 siimple--mb-0 siimple--text-center"><?= $andamento->totale_attualmente_positivi ?></div>
+                                    <div class="siimple-h1 siimple--mb-0 siimple--text-center"><?= $andamento->totale_positivi ?></div>
                                 </div>
                             </div>
                         </div>
