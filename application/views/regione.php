@@ -113,8 +113,8 @@
             <div class="siimple-content theme-content siimple-content--large">
                 <div class="siimple-menu phone-show">
                     <a href="<?php echo site_url('defcont/andamento'); ?>" class="siimple-menu-item">Andamento nazionale</a>
-                    <a href="<?php echo site_url('defcont/regioni'); ?>" class="siimple-menu-item">Regioni</a>
-                    <a href="<?php echo site_url('defcont/province'); ?>" class="siimple-menu-item siimple-menu-item--selected">Province</a>
+                    <a href="<?php echo site_url('defcont/regioni'); ?>" class="siimple-menu-item siimple-menu-item--selected">Regioni</a>
+                    <a href="<?php echo site_url('defcont/province'); ?>" class="siimple-menu-item">Province</a>
                 </div>
                 <div class="siimple-card">
                     <div class="siimple-card-header siimple--text-center">
